@@ -80,7 +80,6 @@ audio:
     mimetype: "audio/mpeg"                                      # Audio MimeType
     modified: "2012-08-14T16:49:50+00:00"                       # Modified Timestamp of file in  ISO format
     size: 80072018                                              # Size in bytes
-    resources:                                                  # Optional resources to display while file is playing
     license:                                                    # If you use file-level encryption
   /6729-002.m4a:
     label: "Track 2"
@@ -90,12 +89,7 @@ audio:
     mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:52+00:00"
     size: 58708453
-    resources:                                          # This part is overly contrived
-      - /target.jpg:                                    # If `start` is defined, `end` is optional
-          start: 0                                      # Use case is to display a resource inline
-      - /battle-plans.pdf:                              # at specific points in the audio
-          start: 3600                                   # I have *never* seen an audiobook with this requirement
-          end: 3800
+    license:
   /6729-003.m4a:
     label: "Track 3"
     source: "http://example.org/audio/6729-003.m4a"
@@ -104,7 +98,6 @@ audio:
     mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:55+00:00"
     size: 61035023
-    resources:
     license:
   /6729-004.m4a:
     label: "Attack Part 1"
@@ -114,7 +107,6 @@ audio:
     mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:59+00:00"
     size: 80736574
-    resources:
     license:
   /6729-005.m4a:
     label: "Attack Part 2"
@@ -124,17 +116,16 @@ audio:
     mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:59+00:00"
     size: 80736574
-    resources:
     license:
 
-playlist:                     # Some people will argue that "Audiobooks Need Structure"
-  - "/6729-001.m4a"           # This is False. Print books need structure.
-  -                           # Not all books have sections/chapters etc etc
-    - "/6729-002.m4a"         # *IF* there is structure, it would be a simple tree
-    -
-      - "/6729-003.m4a"       # You can achieve this by allowing nested lists.
-      - "/6729-004.m4a"       # When parsing, strings are audio resource keys, and lists
-  - "/6729-005.m4a"           # I have *never* seen an audiobook with this level of complexity
+playlist:                   # Some will argue that "Audiobooks Need Structure".
+  - /6729-001.m4a           # This is False. Print books need structure.
+  -                         # Not all books have sections/chapters etc etc
+    - /6729-002.m4a         # *IF* there is structure, it would be a simple tree
+    -                       # You can achieve this by allowing nested lists.
+      - /6729-003.m4a       # When parsing, strings are audio resource keys, and lists
+      - /6729-004.m4a       # I have *never* seen an audiobook with this level of complexity
+  - /6729-005.m4a           # In addition, *no* publisher captures this level of structure for audio
 
 credits:
   authors:                    # List of Authors
