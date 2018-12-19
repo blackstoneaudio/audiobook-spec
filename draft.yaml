@@ -26,21 +26,21 @@
 # It is not necessary to credit me for the work
 resources:
   /cover.jpg: &COVER
-    location: "/cover.jpg"
+    source: "http://example.org/cover.jpg"
     label: "The Art of War (Unabridged)"
     md5s: "06f33a03629a38129cfdfc46be2256c5"
     mimetype: "image/jpeg"
     modified: "2012-08-10T15:39:57+00:00"
     size: 345645
   /target.jpg: &TARGET
-    location: "/target.jpg"
+    source: "http:///target.jpg"
     label: "The Target"
     md5: "f69a7bd55507cb41161f452777701109"
     mimetype: "image/jpeg"
     modified: "2012-08-10T15:39:57+00:00"
     size: 345645
   /battle-plans.pdf: &PLAN
-    location: "/battle-plans.pdf"
+    source: "/battle-plans.pdf"
     label: "Top Secret Battle Plans"
     md5: "2971819be3990807db172ee7079cf907"
     mimetype: "application/pdf"
@@ -62,6 +62,7 @@ audio:
   runtime: 11689.665333333332                 # Total runtime of all the audio, in seconds
   size: 280552068                             # Total size of the audio in bytes
   files: 4                                    # Total number of audio files
+  license:                                    # If you use book-level encryption
   resources:
   - label: "Track 1"                          # Display Label for the track
     location: "/6729-001.m4a"                 # Path to audio file resource
@@ -71,6 +72,7 @@ audio:
     modified: "2012-08-14T16:49:50+00:00"     # Modified Timestamp of file in  ISO format
     size: 80072018                            # Size in bytes
     resources:                                # Optional resources to display while file is playing
+    license:                                  # If you use file-level encryption
   - label: "Track 2"
     location: "/6729-002.m4a"
     length: 2446.1845
@@ -92,6 +94,7 @@ audio:
     modified: "2012-08-14T16:49:55+00:00"
     size: 61035023
     resources:
+    license:
   -                                                     # Some people will argue that "Audiobooks Need Structure"
     - label: "Attack Part 1"                            # This is False. Print books need structure.
       location: "/6729-004.m4a"                         # Not all books have sections/chapters
@@ -101,6 +104,7 @@ audio:
       modified: "2012-08-14T16:49:59+00:00"             # When parsing the audio resources, hashes means files
       size: 80736574                                    # and lists just mean more files, but that are somehow related
       resources:                                        # With this you can easily recreate complex structures
+      license:
     - label: "Attack Part 2"
       location: "/6729-005.m4a"
       length: 3364.022875
@@ -109,6 +113,7 @@ audio:
       modified: "2012-08-14T16:49:59+00:00"
       size: 80736574
       resources:
+      license:
 
 
 
