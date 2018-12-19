@@ -1,0 +1,124 @@
+# General Notes
+# This document is a very rough, first draft of what I was thinking of.
+# Written in YAML, so that I can use Anchors and write comments. It is serializable to JSON.
+#
+# I have included comments/notes on the specific key/value pairs. Most of them are self-explanatory.
+#
+# All `location` nodes should use URIs. Any non-URI, is considered 'internal'
+# For example, `/cover.jpg` would mean 'inside the container, filename cover.jpg'
+# Whereas `file://users/desktop/cover.jpg` would mean 'outside the container, in the users filesystem
+# and `http://somewhere.com/cover.jpg` would be a HTTP resource
+# I don't know how feasible it is, but an option to 'fetch' the resources would be nice.
+#
+# I have honestly over-complicated this example to show its flexibility. In point of fact, only a tiny handful
+# of thew 150,000+ audiobooks I have processed *ever* reach this level of complexity.
+# The average book is 10 hours long, with a number of audio files. Some may have a single PDF
+# In the Audiobook industry, complexity on the side of the Author is usually normalized in the contact
+# negotiation stage. Audiobooks are a very 'flat' structure product.
+#
+# I have included one option for handling structure. Another would be to define the audio resources as collections
+# then use anchors to include them in the audio resources hash.
+#
+# I have to warn you though - NO publisher currently produces audiobooks with *any* kind of structure. Even getting
+# publishers to agree to "One File per logical unit of audio" is basically impossible.
+#
+# You have my permission to redistribute this file in any format, including posting to public forums.
+# It is not necessary to credit me for the work
+resources:
+  /cover.jpg: &COVER
+    location: "/cover.jpg"
+    label: "The Art of War (Unabridged)"
+    md5s: "06f33a03629a38129cfdfc46be2256c5"
+    mimetype: "image/jpeg"
+    modified: "2012-08-10T15:39:57+00:00"
+    size: 345645
+  /target.jpg: &TARGET
+    location: "/target.jpg"
+    label: "The Target"
+    md5: "f69a7bd55507cb41161f452777701109"
+    mimetype: "image/jpeg"
+    modified: "2012-08-10T15:39:57+00:00"
+    size: 345645
+  /battle-plans.pdf: &PLAN
+    location: "/battle-plans.pdf"
+    label: "Top Secret Battle Plans"
+    md5: "2971819be3990807db172ee7079cf907"
+    mimetype: "application/pdf"
+    modified: "2012-08-10T12:23:55+00:00"
+    size: 1524554
+
+book:
+  title: "The Art of War"                                             # Book Title to display
+  subtitle: "The Essential Translation of the Classic Book of Life"   # Book Subtitle
+  abridgement: "Unabridged"                                           # Book Abridgement
+  author: "Sun Tzu"                                                   # Author String
+  narrator: "Joe Mantegna, George Guidall"                            # Narrator String
+  copyright: "Recorded Books, LLC"                                    # Copyright
+  cover: *COVER                                                        # Cover Image
+
+audio:
+  version: "a02291caf068b252c6ba899cf6f13cf3" # Arbitrary version string. For us it's a 'hash of hashes'
+  modified: "2012-08-14T16:49:59+00:00"       # Arbitrary version timestamp in ISO format
+  runtime: 11689.665333333332                 # Total runtime of all the audio, in seconds
+  size: 280552068                             # Total size of the audio in bytes
+  files: 4                                    # Total number of audio files
+  resources:
+  - label: "Track 1"                          # Display Label for the track
+    location: "/6729-001.m4a"                 # Path to audio file resource
+    length: 3336.3330416666668                # Track runtime in seconds
+    md5: "c45c8f927f93f474074c5641f205349c"   # Track data hash
+    mimetype: "audio/mpeg"                    # Audio MimeType
+    modified: "2012-08-14T16:49:50+00:00"     # Modified Timestamp of file in  ISO format
+    size: 80072018                            # Size in bytes
+    resources:                                # Optional resources to display while file is playing
+  - label: "Track 2"
+    location: "/6729-002.m4a"
+    length: 2446.1845
+    md5: "857ce612dc13b3446a8b728286843274"
+    mimetype: "audio/mpeg"
+    modified: "2012-08-14T16:49:52+00:00"
+    size: 58708453
+    resources:                                          # This part is optional and somewhat contrived
+      - <<: *TARGET                                 # If `start` is defined, `end` is optional
+        start: 0                                        # Use case is someone wants to dsiplay a resource inline
+      - <<: *PLAN                                   # at specific points in the audio
+        start: 3600                                     # Resources are displayed in order
+        end: 3800                                       # If `start` is defined, then it is displayed at that time index
+  - label: "Track 3"                                    # If `end` defined, it is hidden at that index            
+    location: "/6729-003.m4a"                           # If there is no `end` it displays until the next resource `start` or EOF
+    length: 2543.1249166666666                          # The use case (for us) is vanishingly rare though.
+    md5: "00408f65e855ccfced068fe7a3a201f5"               # I use YAML Anchors here to keep the definition DRY
+    mimetype: "audio/mpeg"
+    modified: "2012-08-14T16:49:55+00:00"
+    size: 61035023
+    resources:
+  -                                                     # Some people will argue that "Audiobooks Need Structure"
+    - label: "Attack Part 1"                            # This is False. Print books need structure.
+      location: "/6729-004.m4a"                         # Not all books have sections/chapters
+      length: 3364.022875                               # Not all books have prefaces/acknowledgements etc etc etc
+      md5: "15e9654a94eaa16484d8d94a3f4356f8"           # *IF* there is structure, it would be a simple tree
+      mimetype: "audio/mpeg"                            # You can achieve this by allowing nested lists.
+      modified: "2012-08-14T16:49:59+00:00"             # When parsing the audio resources, hashes means files
+      size: 80736574                                    # and lists just mean more files, but that are somehow related
+      resources:                                        # With this you can easily recreate complex structures
+    - label: "Attack Part 2"
+      location: "/6729-005.m4a"
+      length: 3364.022875
+      md5: "1425374a94eaa16484d8783950-34g93"
+      mimetype: "audio/mpeg"
+      modified: "2012-08-14T16:49:59+00:00"
+      size: 80736574
+      resources:
+
+
+
+
+credits:
+  authors:                    # List of Authors
+    - "Sun Tzu"
+  narrators:                  # List of Narrators
+    - "Joe Mantegna"
+    - "George Guidall"
+  publishers:                 # List of Publishers
+    - "Recorded Books, LLC"
+

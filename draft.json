@@ -1,0 +1,137 @@
+{
+  "resources": {
+    "/cover.jpg": {
+      "location": "/cover.jpg",
+      "label": "The Art of War (Unabridged)",
+      "md5s": "06f33a03629a38129cfdfc46be2256c5",
+      "mimetype": "image/jpeg",
+      "modified": "2012-08-10T15:39:57+00:00",
+      "size": 345645
+    },
+    "/target.jpg": {
+      "location": "/target.jpg",
+      "label": "The Target",
+      "md5": "f69a7bd55507cb41161f452777701109",
+      "mimetype": "image/jpeg",
+      "modified": "2012-08-10T15:39:57+00:00",
+      "size": 345645
+    },
+    "/battle-plans.pdf": {
+      "location": "/battle-plans.pdf",
+      "label": "Top Secret Battle Plans",
+      "md5": "2971819be3990807db172ee7079cf907",
+      "mimetype": "application/pdf",
+      "modified": "2012-08-10T12:23:55+00:00",
+      "size": 1524554
+    }
+  },
+  "book": {
+    "title": "The Art of War",
+    "subtitle": "The Essential Translation of the Classic Book of Life",
+    "abridgement": "Unabridged",
+    "author": "Sun Tzu",
+    "narrator": "Joe Mantegna, George Guidall",
+    "copyright": "Recorded Books, LLC",
+    "cover": {
+      "location": "/cover.jpg",
+      "label": "The Art of War (Unabridged)",
+      "md5s": "06f33a03629a38129cfdfc46be2256c5",
+      "mimetype": "image/jpeg",
+      "modified": "2012-08-10T15:39:57+00:00",
+      "size": 345645
+    }
+  },
+  "audio": {
+    "version": "a02291caf068b252c6ba899cf6f13cf3",
+    "modified": "2012-08-14T16:49:59+00:00",
+    "runtime": 11689.665333333332,
+    "size": 280552068,
+    "files": 4,
+    "resources": [
+      {
+        "label": "Track 1",
+        "location": "/6729-001.m4a",
+        "length": 3336.3330416666668,
+        "md5": "c45c8f927f93f474074c5641f205349c",
+        "mimetype": "audio/mpeg",
+        "modified": "2012-08-14T16:49:50+00:00",
+        "size": 80072018,
+        "resources": null
+      },
+      {
+        "label": "Track 2",
+        "location": "/6729-002.m4a",
+        "length": 2446.1845,
+        "md5": "857ce612dc13b3446a8b728286843274",
+        "mimetype": "audio/mpeg",
+        "modified": "2012-08-14T16:49:52+00:00",
+        "size": 58708453,
+        "resources": [
+          {
+            "location": "/target.jpg",
+            "label": "The Target",
+            "md5": "f69a7bd55507cb41161f452777701109",
+            "mimetype": "image/jpeg",
+            "modified": "2012-08-10T15:39:57+00:00",
+            "size": 345645,
+            "start": 0
+          },
+          {
+            "location": "/battle-plans.pdf",
+            "label": "Top Secret Battle Plans",
+            "md5": "2971819be3990807db172ee7079cf907",
+            "mimetype": "application/pdf",
+            "modified": "2012-08-10T12:23:55+00:00",
+            "size": 1524554,
+            "start": 3600,
+            "end": 3800
+          }
+        ]
+      },
+      {
+        "label": "Track 3",
+        "location": "/6729-003.m4a",
+        "length": 2543.1249166666666,
+        "md5": "00408f65e855ccfced068fe7a3a201f5",
+        "mimetype": "audio/mpeg",
+        "modified": "2012-08-14T16:49:55+00:00",
+        "size": 61035023,
+        "resources": null
+      },
+      [
+        {
+          "label": "Attack Part 1",
+          "location": "/6729-004.m4a",
+          "length": 3364.022875,
+          "md5": "15e9654a94eaa16484d8d94a3f4356f8",
+          "mimetype": "audio/mpeg",
+          "modified": "2012-08-14T16:49:59+00:00",
+          "size": 80736574,
+          "resources": null
+        },
+        {
+          "label": "Attack Part 2",
+          "location": "/6729-005.m4a",
+          "length": 3364.022875,
+          "md5": "1425374a94eaa16484d8783950-34g93",
+          "mimetype": "audio/mpeg",
+          "modified": "2012-08-14T16:49:59+00:00",
+          "size": 80736574,
+          "resources": null
+        }
+      ]
+    ]
+  },
+  "credits": {
+    "authors": [
+      "Sun Tzu"
+    ],
+    "narrators": [
+      "Joe Mantegna",
+      "George Guidall"
+    ],
+    "publishers": [
+      "Recorded Books, LLC"
+    ]
+  }
+}
