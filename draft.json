@@ -49,7 +49,6 @@
       "mimetype": "audio/mpeg",
       "modified": "2012-08-14T16:49:50+00:00",
       "size": 80072018,
-      "resources": null,
       "license": null
     },
     "/6729-002.m4a": {
@@ -60,19 +59,7 @@
       "mimetype": "audio/mpeg",
       "modified": "2012-08-14T16:49:52+00:00",
       "size": 58708453,
-      "resources": [
-        {
-          "/target.jpg": {
-            "start": 0
-          }
-        },
-        {
-          "/battle-plans.pdf": {
-            "start": 3600,
-            "end": 3800
-          }
-        }
-      ]
+      "license": null
     },
     "/6729-003.m4a": {
       "label": "Track 3",
@@ -82,7 +69,6 @@
       "mimetype": "audio/mpeg",
       "modified": "2012-08-14T16:49:55+00:00",
       "size": 61035023,
-      "resources": null,
       "license": null
     },
     "/6729-004.m4a": {
@@ -93,7 +79,6 @@
       "mimetype": "audio/mpeg",
       "modified": "2012-08-14T16:49:59+00:00",
       "size": 80736574,
-      "resources": null,
       "license": null
     },
     "/6729-005.m4a": {
@@ -104,7 +89,6 @@
       "mimetype": "audio/mpeg",
       "modified": "2012-08-14T16:49:59+00:00",
       "size": 80736574,
-      "resources": null,
       "license": null
     }
   },
