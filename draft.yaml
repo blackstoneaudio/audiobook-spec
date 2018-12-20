@@ -115,11 +115,20 @@ audio:
 
 # Some will argue that "Audiobooks Need Structure". This is not true, Print books need structure.
 # Not all books have sections/chapters etc etc
+#
 # *IF* there is structure, it would be a simple tree. You can achieve visually with indenting.
 # You could add a 'group' ordinal, or allow multiple, but I have *never* seen an audiobook
 # with this level of complexity
+#
 # In addition, *no* publisher captures this level of structure for audio
+#
 # Below is a deliberately complex example, just to demonstrate the idea
+# The nominal idea here, is a Publisher can communicate the desired format/layout of the tracks
+#
+# There are *never* any contractual obligations regarding how track lists appear. This is because
+# it is not something that we have ever (or will ever) have control over.
+# So we can hint at a layout/style/structure, but there is no obligation on the part of the developer
+# beyond displaying the 'label''
 playlist:
   - label: "Part One"               # Label for the group. 'null' would display no label.
     indent: 0                       # Offset from left
@@ -163,19 +172,19 @@ playlist:
 #    indent: 0
 #    stylesheet: "player.css"
 #    contents:
-#      - label: "In the Beginning"
+#      - label: "Track 1"
 #        audio: "/6729-001.m4a"
 #        style: 'track'
-#      - label: "War is coming"
+#      - label: "Track 2"
 #        audio: "/6729-002.m4a"
 #        style: 'track'
-#      - label: "Fight!"
+#      - label: "Track 3"
 #        audio: "/6729-003.m4a"
 #        style: 'track'
-#      - label: "Winners"
+#      - label: "Track 4"
 #        audio: "/6729-004.m4a"
 #        style: 'track'
-#      - label: "Losers"
+#      - label: "Track 5"
 #        audio: "/6729-005.m4a"
 #        style: 'track'
 
