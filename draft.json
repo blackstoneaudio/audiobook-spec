@@ -1,11 +1,11 @@
 {
   "book": {
-    "title": "The Art of War",
-    "subtitle": "The Essential Translation of the Classic Book of Life",
+    "title": "War and Peace... in space!",
+    "subtitle": "A short book about Nothing",
     "abridgement": "Unabridged",
-    "author": "Sun Tzu",
-    "narrator": "Joe Mantegna, George Guidall",
-    "copyright": "Recorded Books, LLC",
+    "author": "John Doe",
+    "narrator": "Joe Bloggs, Geoff Jukes",
+    "copyright": "Blackstone Publishing, Inc.",
     "cover": "/cover.jpg",
     "version": "a02291caf068b252c6ba899cf6f13cf3",
     "modified": "2012-08-14T16:49:59+00:00",
@@ -150,14 +150,14 @@
   ],
   "credits": {
     "authors": [
-      "Sun Tzu"
+      "John Doe"
     ],
     "narrators": [
-      "Joe Mantegna",
-      "George Guidall"
+      "Geoff Jukes",
+      "Joe Bloggs"
     ],
     "publishers": [
-      "Recorded Books, LLC"
+      "Blackstone Publishing, Inc."
     ]
   }
 }

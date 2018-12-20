@@ -32,12 +32,12 @@
 # `cover` is a resource reference. The key is resolvable in the `resources` hash
 # This is the information that is displayed before any audio is downloaded i.e. in the users 'library'
 book:
-  title: "The Art of War"                                             # Book Title to display
-  subtitle: "The Essential Translation of the Classic Book of Life"   # Book Subtitle
+  title: "War and Peace... in space!"                                  # Book Title to display
+  subtitle: "A short book about Nothing"                              # Book Subtitle
   abridgement: "Unabridged"                                           # Book Abridgement
-  author: "Sun Tzu"                                                   # Author String
-  narrator: "Joe Mantegna, George Guidall"                            # Narrator String
-  copyright: "Recorded Books, LLC"                                    # Copyright
+  author: "John Doe"                                                  # Author String
+  narrator: "Joe Bloggs, Geoff Jukes"                                 # Narrator String
+  copyright: "Blackstone Publishing, Inc."                            # Copyright
   cover: '/cover.jpg'                                                 # Cover Image from resources
   version: "a02291caf068b252c6ba899cf6f13cf3"                         # Arbitrary version string. For us it's a 'hash of hashes'
   modified: "2012-08-14T16:49:59+00:00"                               # Arbitrary version timestamp in ISO format
@@ -202,10 +202,10 @@ playlist:
 
 credits:
   authors:                    # List of Authors
-    - "Sun Tzu"
+    - "John Doe"
   narrators:                  # List of Narrators
-    - "Joe Mantegna"
-    - "George Guidall"
+    - "Geoff Jukes"
+    - "Joe Bloggs"
   publishers:                 # List of Publishers
-    - "Recorded Books, LLC"
+    - "Blackstone Publishing, Inc."
 
