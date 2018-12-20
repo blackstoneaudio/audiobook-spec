@@ -4,7 +4,7 @@ Data-oriented audiobook specification suitable for distribution and consumption.
 
 ## Background
 
-Blackstone Audio is the largest independent Audiobook publisher in the United States, with over 30 years experience in Audiobook production.
+Blackstone Audio is the largest independent audiobook publisher in the United States, with over 30 years experience in Audiobook production.
 
 We produce and distribute original content through multiple digital and physical channels, and act as an aggregator for other publishers' content.
 
@@ -67,7 +67,7 @@ As for 'X':
 
 ## But this "spec" is just a file? Where's the rest?
 
-I beleive that a single file can describe where the assets are, and how to organize them. Think of it like a packing slip AND an assembly guide, in one.
+I believe that a single file can describe where the assets are, and how to organize them. Think of it like a packing slip AND an assembly guide, in one.
 
 We could deliver *just* this file (for example to our App) and it would be able to assemble the pieces from cloud storage.
 We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it would equally describe the contents of that package.
@@ -75,9 +75,9 @@ We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it
 ### A note about M4Bs
 If you are wondering why I would completely ignore M4Bs, it's because they are completely unsuitable:
 
-It's an Apple spec tacked onto the MP4 spec
-Software options for automated creation is woefully limited
-A maximum runtime of 9hrs 15 minutes, until you risk breaking the player.
-The 'bookmarks' are flat with no display options
-Only AAC encoded audio is supported - and must be created as a single file
-and many, many more reasons....
+* It's an Apple spec tacked onto the MP4 spec
+* Software options for automated creation is woefully limited
+* A maximum runtime of 9hrs 15 minutes, until you risk breaking the player.
+* The 'bookmarks' are flat with no display options
+* Only AAC encoded audio is supported - and must be created as a single file
+* and many, many more reasons....
