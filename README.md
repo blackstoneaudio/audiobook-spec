@@ -61,7 +61,7 @@ There are also several 'holes' in the delivery chain that break down with the fi
 
 As for 'X':
 
-* JSON is universally understood (did I mention YAML serializes to JSON?)
+* Did I mention YAML serializes to JSON?
 * XML hurts my brain
 * CSV is not multi-dimensional
 
