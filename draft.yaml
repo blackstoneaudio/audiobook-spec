@@ -4,20 +4,22 @@
 #
 # I have included comments/notes on the specific key/value pairs. Most of them are self-explanatory.
 #
-# All `location` nodes should use URIs. Any non-URI, is considered 'internal'
+# All `source` nodes should use URIs. Any non-URI, is considered 'internal'
+# `resource` and `audio` keys are treated as 'internal' resources, and are fetched to that location from the `source`
+#
 # For example, `/cover.jpg` would mean 'inside the container, filename cover.jpg'
 # Whereas `file://users/desktop/cover.jpg` would mean 'outside the container, in the users filesystem
 # and `http://somewhere.com/cover.jpg` would be a HTTP resource
 # I don't know how feasible it is, but an option to 'fetch' the resources would be nice.
 #
 # I have honestly over-complicated this example to show its flexibility. In point of fact, only a tiny handful
-# of thew 150,000+ audiobooks I have processed *ever* reach this level of complexity.
-# The average book is 10 hours long, with a number of audio files. Some may have a single PDF
+# of the 150,000+ audiobooks I have processed *ever* reach this level of complexity.
+# The average book is 10 hours long, with a number of audio files, and maybe a single PDF.
+#
 # In the Audiobook industry, complexity on the side of the Author is usually normalized in the contact
 # negotiation stage. Audiobooks are a very 'flat' structure product.
 #
-# I have included one option for handling structure. Another would be to define the audio resources as collections
-# then use anchors to include them in the audio resources hash.
+# I have included one option for handling a complex playlist structure.
 #
 # I have to warn you though - NO publisher currently produces audiobooks with *any* kind of structure. Even getting
 # publishers to agree to "One File per logical unit of audio" is basically impossible.
@@ -71,6 +73,10 @@ resources:
     modified: "2012-08-10T12:23:55+00:00"
     size: 1524554
 
+# `audio` covers the audio file resources.
+# same as `resources`, the key is the container-relative path. If it is not available at that location
+# it can be 'fetched' from the `source`
+# Basically an extension of the `resources` hashes, adding length and license values.
 audio:
   /6729-001.m4a:
     source: "http://example.org/audio/6729-001.m4a"             # Source of audio file resource
@@ -113,20 +119,17 @@ audio:
     size: 80736574
     license:
 
-# Some will argue that "Audiobooks Need Structure". This is not true, Print books need structure.
-# Not all books have sections/chapters etc etc
+# Now some will argue that "Audiobooks Need Structure". I say that is not true, Print books need structure.
 #
-# *IF* there is structure, it would be a simple tree. You can achieve visually with indenting.
-# You could add a 'group' ordinal, or allow multiple, but I have *never* seen an audiobook
-# with this level of complexity
+# There are *never* any contractual obligations regarding how track lists appear. This is because
+# it is not something that we have ever (or will ever) have universal control over.
+# Should that ever change, the most that could be asked for would be "best efforts" - which this allows.
 #
-# In addition, *no* publisher captures this level of structure for audio
+# Oh, and *no* publisher captures this level of structure for audio.
 #
 # Below is a deliberately complex example, just to demonstrate the idea
 # The nominal idea here, is a Publisher can communicate the desired format/layout of the tracks
 #
-# There are *never* any contractual obligations regarding how track lists appear. This is because
-# it is not something that we have ever (or will ever) have control over.
 # So we can hint at a layout/style/structure, but there is no obligation on the part of the developer
 # beyond displaying the 'label''
 playlist:
