@@ -32,17 +32,26 @@
 # `cover` is a resource reference. The key is resolvable in the `resources` hash
 # This is the information that is displayed before any audio is downloaded i.e. in the users 'library'
 book:
-  title: "War and Peace... in space!"                                 # Book Title to display
-  subtitle: "A short book about Nothing"                              # Book Subtitle
+  title: "The Story of a Specification"                               # Book Title to display
+  subtitle: "From nothing, to something"                              # Book Subtitle
   abridgement: "Unabridged"                                           # Book Abridgement
-  author: "John Doe"                                                  # Author String
-  narrator: "Joe Bloggs, Geoff Jukes"                                 # Narrator String
+  author: "Geoff Jukes and Others"                                    # Author String
+  narrator: "Geoff Jukes"                                             # Narrator String
   copyright: "Blackstone Publishing, Inc."                            # Copyright
   isbn13: "9781234567890"                                             # Product ISBN 13
   cover: '/cover.jpg'                                                 # Cover Image from resources
   version: "a02291caf068b252c6ba899cf6f13cf3"                         # Arbitrary version string. For us it's a 'hash of hashes'
   modified: "2012-08-14T16:49:59+00:00"                               # Arbitrary version timestamp in ISO format
   license:                                                            # If you use book-level encryption
+  credits:
+    authors:                    # List of Authors
+      - "Geoff Jukes"
+    narrators:                  # List of Narrators
+      - "Geoff Jukes"
+    publishers:                 # List of Publishers
+      - "Blackstone Publishing, Inc."
+    contributors:
+      - "The World"
   audio:
     files: 4                                                          # Total number of audio files
     size: 280552068                                                   # Total size of the audio in bytes
@@ -58,7 +67,7 @@ book:
 resources:
   /cover.jpg:
     source: "http://example.org/cover.jpg"
-    label: "War and Peace... in space! (Unabridged)"
+    label: "The Story of a Specification (Unabridged)"
     md5s: "06f33a03629a38129cfdfc46be2256c5"
     mimetype: "image/jpeg"
     modified: "2012-08-10T15:39:57+00:00"
@@ -147,18 +156,18 @@ playlist:
         audio: "/6729-001.m4a"      # audio resource key
         indent: 1                   # Additional offset from left (in addition to group offset)
         style: "track"
-      - label: "War is coming"
+      - label: "An Idea Forms"
         audio: "/6729-002.m4a"
         indent: 1
         style: 'track'
         resources:
           - "target.jpg"            # Array of resources associated with this audio
-  - label: "The War"
+  - label: "The Journey"
     style: "subsection-red"
     indent: 1
     stylesheet: "default.css"
     contents:
-      - label: "Fight!"
+      - label: "A First Draft!"
         audio: "/6729-003.m4a"
         indent: 1
         style: "blood-red"
@@ -182,9 +191,9 @@ playlist:
 # ---
 # Part One
 #  In The Beginning *
-#  War is Coming *
-#  The War
-#   Fight! *
+#  An Idea Forms *
+#  The Journey
+#   A First Draft! *
 # Part Two
 #  Winners *
 #  Losers *
@@ -204,13 +213,4 @@ playlist:
 #      - label: "Track 5"
 #        audio: "/6729-005.m4a"
 
-
-credits:
-  authors:                    # List of Authors
-    - "John Doe"
-  narrators:                  # List of Narrators
-    - "Geoff Jukes"
-    - "Joe Bloggs"
-  publishers:                 # List of Publishers
-    - "Blackstone Publishing, Inc."
 

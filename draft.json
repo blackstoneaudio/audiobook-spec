@@ -1,16 +1,30 @@
 {
   "book": {
-    "title": "War and Peace... in space!",
-    "subtitle": "A short book about Nothing",
+    "title": "The Story of a Specification",
+    "subtitle": "From nothing, to something",
     "abridgement": "Unabridged",
-    "author": "John Doe",
-    "narrator": "Joe Bloggs, Geoff Jukes",
+    "author": "Geoff Jukes and Others",
+    "narrator": "Geoff Jukes",
     "copyright": "Blackstone Publishing, Inc.",
     "isbn13": "9781234567890",
     "cover": "/cover.jpg",
     "version": "a02291caf068b252c6ba899cf6f13cf3",
     "modified": "2012-08-14T16:49:59+00:00",
     "license": null,
+    "credits": {
+      "authors": [
+        "Geoff Jukes"
+      ],
+      "narrators": [
+        "Geoff Jukes"
+      ],
+      "publishers": [
+        "Blackstone Publishing, Inc."
+      ],
+      "contributors": [
+        "The World"
+      ]
+    },
     "audio": {
       "files": 4,
       "size": 280552068,
@@ -24,7 +38,7 @@
   "resources": {
     "/cover.jpg": {
       "source": "http://example.org/cover.jpg",
-      "label": "War and Peace... in space! (Unabridged)",
+      "label": "The Story of a Specification (Unabridged)",
       "md5s": "06f33a03629a38129cfdfc46be2256c5",
       "mimetype": "image/jpeg",
       "modified": "2012-08-10T15:39:57+00:00",
@@ -108,7 +122,7 @@
           "style": "track"
         },
         {
-          "label": "War is coming",
+          "label": "An Idea Forms",
           "audio": "/6729-002.m4a",
           "indent": 1,
           "style": "track",
@@ -119,13 +133,13 @@
       ]
     },
     {
-      "label": "The War",
+      "label": "The Journey",
       "style": "subsection-red",
       "indent": 1,
       "stylesheet": "default.css",
       "contents": [
         {
-          "label": "Fight!",
+          "label": "A First Draft!",
           "audio": "/6729-003.m4a",
           "indent": 1,
           "style": "blood-red",
@@ -154,17 +168,5 @@
         }
       ]
     }
-  ],
-  "credits": {
-    "authors": [
-      "John Doe"
-    ],
-    "narrators": [
-      "Geoff Jukes",
-      "Joe Bloggs"
-    ],
-    "publishers": [
-      "Blackstone Publishing, Inc."
-    ]
-  }
+  ]
 }
