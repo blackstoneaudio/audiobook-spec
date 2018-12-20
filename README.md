@@ -72,12 +72,16 @@ I believe a single file can describe where the assets are, and how to organize t
 We could deliver *just* this file (for example to our app) and it would be able to assemble the pieces from cloud storage.
 We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it would equally describe the contents of that package.
 
-### A note about M4Bs
-If you are wondering why I would completely ignore M4Bs, it's because they are completely unsuitable:
+## What about M4Bs?
 
-* It's an Apple spec tacked onto the MP4 spec
+If you are wondering why I would completely ignore M4Bs....
+
+* It's an extension of the MP4 spec, with custom Atoms
 * Software options for automated creation is woefully limited
-* A maximum runtime of 9hrs 15 minutes
+* Software options for playback is equally limited
+* A maximum runtime of 9 hours 15 minutes - our average book is 10 hours
+* The longer the book the harder it is to navigate
 * The 'bookmarks' are flat with no display options
-* Only AAC encoded audio is supported - and must be created as a single file
+* Only AAC encoded audio is supported
+* Audio must be encoded as a single file
 * and many, many more reasons....
