@@ -15,9 +15,11 @@ Our automated Ingestion platforms process ONIX to gather all the metadata for a 
 
 Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages.
 
-Our end-user apps (Web, Android, iOS) all need to fetch the audio assets, validate them, and then display them in the correct order for playback.
+Through our Consumer website we sell contents from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS)
 
-So it all starts with the publisher - and audio deliveries vary from publisher to publisher.
+## Where does it start?
+
+It all starts with the publisher - and audio deliveries vary from publisher to publisher.
 
 The only thing that is tentatively agreed on is:
 
