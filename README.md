@@ -2,6 +2,8 @@
 
 Data-oriented audiobook specification suitable for distribution and consumption.
 
+Notes can be found in [draft.yaml](draft.yaml)
+
 ## Background
 
 Blackstone Audio is the largest independent audiobook publisher in the United States, with 30+ years experience in Audiobook production.
