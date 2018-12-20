@@ -73,7 +73,6 @@ resources:
 
 audio:
   /6729-001.m4a:
-    label: "Track 1"                                            # Display Label for the track
     source: "http://example.org/audio/6729-001.m4a"             # Source of audio file resource
     length: 3336.3330416666668                                  # Track runtime in seconds
     md5: "c45c8f927f93f474074c5641f205349c"                     # Track data hash
@@ -82,7 +81,6 @@ audio:
     size: 80072018                                              # Size in bytes
     license:                                                    # If you use file-level encryption
   /6729-002.m4a:
-    label: "Track 2"
     source: "http://example.org/audio/6729-002.m4a"
     length: 2446.1845
     md5: "857ce612dc13b3446a8b728286843274"
@@ -91,7 +89,6 @@ audio:
     size: 58708453
     license:
   /6729-003.m4a:
-    label: "Track 3"
     source: "http://example.org/audio/6729-003.m4a"
     length: 2543.1249166666666
     md5: "00408f65e855ccfced068fe7a3a201f5"
@@ -100,7 +97,6 @@ audio:
     size: 61035023
     license:
   /6729-004.m4a:
-    label: "Attack Part 1"
     source: "http://example.org/audio/6729-004.m4a"
     length: 3364.022875
     md5: "15e9654a94eaa16484d8d94a3f4356f8"
@@ -109,7 +105,6 @@ audio:
     size: 80736574
     license:
   /6729-005.m4a:
-    label: "Attack Part 2"
     source: "http://example.org/audio/6729-005.m4a"
     length: 3364.022875
     md5: "1425374a94eaa16484d8783950-34g93"
@@ -118,14 +113,72 @@ audio:
     size: 80736574
     license:
 
-playlist:                   # Some will argue that "Audiobooks Need Structure".
-  - /6729-001.m4a           # This is False. Print books need structure.
-  -                         # Not all books have sections/chapters etc etc
-    - /6729-002.m4a         # *IF* there is structure, it would be a simple tree
-    -                       # You can achieve this by allowing nested lists.
-      - /6729-003.m4a       # When parsing, strings are audio resource keys, and lists
-      - /6729-004.m4a       # I have *never* seen an audiobook with this level of complexity
-  - /6729-005.m4a           # In addition, *no* publisher captures this level of structure for audio
+# Some will argue that "Audiobooks Need Structure". This is not true, Print books need structure.
+# Not all books have sections/chapters etc etc
+# *IF* there is structure, it would be a simple tree. You can achieve visually with indenting.
+# You could add a 'group' ordinal, or allow multiple, but I have *never* seen an audiobook
+# with this level of complexity
+# In addition, *no* publisher captures this level of structure for audio
+# Below is a deliberately complex example, just to demonstrate the idea
+playlist:
+  - label: "Part One"               # Label for the group. 'null' would display no label.
+    indent: 0                       # Offset from left
+    stylesheet: "player.css"        # CSS stylesheet to use for this goup
+    contents:                       # Audio Files to include in this group
+      - label: "In the Beginning"   # Display Label
+        audio: "/6729-001.m4a"      # audio resource key
+        indent: 1                   # Additional offset from left (in addition to group offset)
+        style: 'track'              # CSS style to use
+      - label: "War is coming"
+        audio: "/6729-002.m4a"
+        indent: 1
+        style: 'track'
+        resources:
+          - "target.jpg"            # Array of resources associated with this audio
+  - label: "The War"
+    indent: 1
+    contents:
+      - label: "Fight!"
+        audio: "/6729-003.m4a"
+        indent: 1
+        style: 'track'
+        resources:
+          - "/battle-plans.pdf"
+  - label: "Part Two"
+    indent: 0
+    contents:
+      - label: "Winners"
+        audio: "/6729-004.m4a"
+        indent: 1
+        style: 'track'
+      - label: "Losers"
+        audio: "/6729-005.m4a"
+        indent: 1
+        style: 'track'
+
+
+# What you will see most often is this:
+#playlist:
+#  - label:
+#    indent: 0
+#    stylesheet: "player.css"        # CSS stylesheet to use for this goup
+#    contents:                       # Audio Files to include in this group
+#      - label: "In the Beginning"   # Display Label
+#        audio: "/6729-001.m4a"      # audio resource key
+#        style: 'track'              # CSS style to use
+#      - label: "War is coming"
+#        audio: "/6729-002.m4a"
+#        style: 'track'
+#      - label: "Fight!"
+#        audio: "/6729-003.m4a"
+#        style: 'track'
+#      - label: "Winners"
+#        audio: "/6729-004.m4a"
+#        style: 'track'
+#      - label: "Losers"
+#        audio: "/6729-005.m4a"
+#        style: 'track'
+
 
 credits:
   authors:                    # List of Authors

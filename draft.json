@@ -42,7 +42,6 @@
   },
   "audio": {
     "/6729-001.m4a": {
-      "label": "Track 1",
       "source": "http://example.org/audio/6729-001.m4a",
       "length": 3336.3330416666668,
       "md5": "c45c8f927f93f474074c5641f205349c",
@@ -52,7 +51,6 @@
       "license": null
     },
     "/6729-002.m4a": {
-      "label": "Track 2",
       "source": "http://example.org/audio/6729-002.m4a",
       "length": 2446.1845,
       "md5": "857ce612dc13b3446a8b728286843274",
@@ -62,7 +60,6 @@
       "license": null
     },
     "/6729-003.m4a": {
-      "label": "Track 3",
       "source": "http://example.org/audio/6729-003.m4a",
       "length": 2543.1249166666666,
       "md5": "00408f65e855ccfced068fe7a3a201f5",
@@ -72,7 +69,6 @@
       "license": null
     },
     "/6729-004.m4a": {
-      "label": "Attack Part 1",
       "source": "http://example.org/audio/6729-004.m4a",
       "length": 3364.022875,
       "md5": "15e9654a94eaa16484d8d94a3f4356f8",
@@ -82,7 +78,6 @@
       "license": null
     },
     "/6729-005.m4a": {
-      "label": "Attack Part 2",
       "source": "http://example.org/audio/6729-005.m4a",
       "length": 3364.022875,
       "md5": "1425374a94eaa16484d8783950-34g93",
@@ -93,15 +88,61 @@
     }
   },
   "playlist": [
-    "/6729-001.m4a",
-    [
-      "/6729-002.m4a",
-      [
-        "/6729-003.m4a",
-        "/6729-004.m4a"
+    {
+      "label": "Part One",
+      "indent": 0,
+      "stylesheet": "player.css",
+      "contents": [
+        {
+          "label": "In the Beginning",
+          "audio": "/6729-001.m4a",
+          "indent": 1,
+          "style": "track"
+        },
+        {
+          "label": "War is coming",
+          "audio": "/6729-002.m4a",
+          "indent": 1,
+          "style": "track",
+          "resources": [
+            "target.jpg"
+          ]
+        }
       ]
-    ],
-    "/6729-005.m4a"
+    },
+    {
+      "label": "The War",
+      "indent": 1,
+      "contents": [
+        {
+          "label": "Fight!",
+          "audio": "/6729-003.m4a",
+          "indent": 1,
+          "style": "track",
+          "resources": [
+            "/battle-plans.pdf"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Part Two",
+      "indent": 0,
+      "contents": [
+        {
+          "label": "Winners",
+          "audio": "/6729-004.m4a",
+          "indent": 1,
+          "style": "track"
+        },
+        {
+          "label": "Losers",
+          "audio": "/6729-005.m4a",
+          "indent": 1,
+          "style": "track"
+        }
+      ]
+    }
   ],
   "credits": {
     "authors": [
