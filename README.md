@@ -12,7 +12,9 @@ To date, we have processed over 115,000 audiobook titles, converting them into s
 We have Apps, Web Players, and distribution agreements. All of these need to know what order play the audio, and how to display it. We need to know if we have all the resources for a book, and that those resources are in-tact.
 
 Our automated Ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
+
 Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages.
+
 Our end-user apps (Web, Android, iOS) all need to fetch the audio assets, validate them, and then display them in the correct order for playback.
 
 So it all starts with the publisher - and audio deliveries vary from publisher to publisher.
