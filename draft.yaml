@@ -199,18 +199,27 @@ playlist:
 #  Losers *
 # ---
 #
+# I like this layout because it allows for complex groups of audio, without being difficult to read or parse.
+# It also allows the much simpler (and more common) 'track list' (see below)
+# Each 'list' can represent a main section or a book (part one, part 2 etc).
+# The top-level `label` is optional, and would be omitted from display if `null`
+# Aesthetic sections would have no `audio` item, and would display just as a label for formatting.
+# Functional sections would have an `audio` and/or `resources` element
+#
 # Honestly, what you will probably see most often is this:
-#playlist:
-#  - contents:
-#      - label: "Track 1"
-#        audio: "/6729-001.m4a"
-#      - label: "Track 2"
+# ---
+# playlist:
+#   - contents:
+#       - label: "Track 1"
+#         audio: "/6729-001.m4a"
+#       - label: "Track 2"
 #        audio: "/6729-002.m4a"
-#      - label: "Track 3"
-#        audio: "/6729-003.m4a"
-#      - label: "Track 4"
-#        audio: "/6729-004.m4a"
-#      - label: "Track 5"
-#        audio: "/6729-005.m4a"
-
+#       - label: "Track 3"
+#         audio: "/6729-003.m4a"
+#       - label: "Track 4"
+#         audio: "/6729-004.m4a"
+#       - label: "Track 5"
+#         audio: "/6729-005.m4a"
+# ---
+#
 
