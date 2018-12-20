@@ -13,7 +13,7 @@ We have Apps, Web Players, and distribution agreements. All of these need to kno
 
 Our automated Ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
 
-Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages.
+Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages, for delivery to resellers and distribution partners.
 
 Through our Consumer website we sell contents from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS)
 
