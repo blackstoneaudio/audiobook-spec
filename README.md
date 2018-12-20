@@ -62,7 +62,7 @@ There are also several 'holes' in the delivery chain that break down with the fi
 As for 'X':
 
 * Did I mention YAML serializes to JSON?
-* XML hurts my brain
+* XML hurts my eyes
 * CSV is not multi-dimensional
 
 ## But this "spec" is just a file? Where's the rest?
