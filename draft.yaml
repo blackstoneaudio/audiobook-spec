@@ -134,13 +134,14 @@ audio:
 # beyond displaying the 'label''
 playlist:
   - label: "Part One"               # Label for the group. 'null' would display no label.
+    style: "book-section"           # Default CSS Style for Playlist entries
     indent: 0                       # Offset from left
-    stylesheet: "player.css"        # CSS stylesheet to use for this goup
+    stylesheet: "default.css"       # Stylesheet for this list
     contents:                       # Audio Files to include in this group
       - label: "In the Beginning"   # Display Label
         audio: "/6729-001.m4a"      # audio resource key
         indent: 1                   # Additional offset from left (in addition to group offset)
-        style: 'track'              # CSS style to use
+        style: "track"
       - label: "War is coming"
         audio: "/6729-002.m4a"
         indent: 1
@@ -148,48 +149,55 @@ playlist:
         resources:
           - "target.jpg"            # Array of resources associated with this audio
   - label: "The War"
+    style: "subsection-red"
     indent: 1
+    stylesheet: "default.css"
     contents:
       - label: "Fight!"
         audio: "/6729-003.m4a"
         indent: 1
-        style: 'track'
+        style: "blood-red"
         resources:
           - "/battle-plans.pdf"
   - label: "Part Two"
     indent: 0
+    stype: "book-section"
     contents:
       - label: "Winners"
         audio: "/6729-004.m4a"
         indent: 1
-        style: 'track'
+        style: "track"
       - label: "Losers"
         audio: "/6729-005.m4a"
         indent: 1
-        style: 'track'
+        style: "track"
 
-
-# What you will see most often is this:
+# The example above would display similar to this:
+# [* means it would play a track]
+# ---
+# Part One
+#  In The Beginning *
+#  War is Coming *
+#  The War
+#   Fight! *
+# Part Two
+#  Winners *
+#  Losers *
+# ---
+#
+# Honestly, what you will probably see most often is this:
 #playlist:
-#  - label:
-#    indent: 0
-#    stylesheet: "player.css"
-#    contents:
+#  - contents:
 #      - label: "Track 1"
 #        audio: "/6729-001.m4a"
-#        style: 'track'
 #      - label: "Track 2"
 #        audio: "/6729-002.m4a"
-#        style: 'track'
 #      - label: "Track 3"
 #        audio: "/6729-003.m4a"
-#        style: 'track'
 #      - label: "Track 4"
 #        audio: "/6729-004.m4a"
-#        style: 'track'
 #      - label: "Track 5"
 #        audio: "/6729-005.m4a"
-#        style: 'track'
 
 
 credits:

@@ -90,8 +90,9 @@
   "playlist": [
     {
       "label": "Part One",
+      "style": "book-section",
       "indent": 0,
-      "stylesheet": "player.css",
+      "stylesheet": "default.css",
       "contents": [
         {
           "label": "In the Beginning",
@@ -112,13 +113,15 @@
     },
     {
       "label": "The War",
+      "style": "subsection-red",
       "indent": 1,
+      "stylesheet": "default.css",
       "contents": [
         {
           "label": "Fight!",
           "audio": "/6729-003.m4a",
           "indent": 1,
-          "style": "track",
+          "style": "blood-red",
           "resources": [
             "/battle-plans.pdf"
           ]
@@ -128,6 +131,7 @@
     {
       "label": "Part Two",
       "indent": 0,
+      "stype": "book-section",
       "contents": [
         {
           "label": "Winners",
