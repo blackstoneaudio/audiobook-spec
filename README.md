@@ -1,7 +1,9 @@
 # Blackstone Audio Audiobook Spec
+
 Data-oriented audiobook specification suitable for distribution and consumption.
 
 ## Background
+
 Blackstone Audio is the largest independent Audiobook publisher in the United States, with over 30 years experience in Audiobook production.
 
 We produce and distribute original content through multiple digital and physical channels, and act as an aggregator for other publishers' content.
@@ -25,6 +27,7 @@ Sometimes (but not always) there is some form of 'manifest'. This manifest could
 When we redistribute content to other resellers, we adhere to the above agreement in addition to the custom specification laid out by our distribution partner.
 
 ## Why a Spec?
+
 ONIX is a fantastic (if complex) standard for communicating Metadata. Supplemental material, samples, and cover image URLs can also be embedded.
 
 Unfortunately ONIX is not suitable for the Audio details, and no such standard exists.
@@ -47,3 +50,34 @@ There are also several 'holes' in the delivery chain that break down with the fi
 * If they have taken the extra time to label the tracks (Chapter 1, Part 3, etc) there is no standard way of ingesting that in order to preserve that work.
 * They cannot indicate any contractual obligations regarding the labelling of the audio
 * There is no standard way of exchanging additional data about the files (md5, runtime, count) to ensure they are complete
+
+## Why YAML? Why not just use 'X'?
+
+YAML is easy to read
+YAML is a superset of JSON
+YAML supports comments
+YAML supports anchors/aliases
+YAML serializes to JSON
+
+As for 'X':
+
+JSON is universally understood (did I mention YAML serializes to JSON?)
+XML hurts my brain
+CSV is not multi-dimensional
+
+## But this "spec" is just a file? Where's the rest?
+
+I beleive that a single file can describe where the assets are, and how to organize them. Think of it like a packing slip AND an assembly guide, in one.
+
+We could deliver *just* this file (for example to our App) and it would be able to assemble the pieces
+We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it would equally describe the contents of that package.
+
+### A note about M4Bs
+If you are wondering why I would completely ignore M4Bs, it's because they are completely unsuitable:
+
+It's an Apple spec tacked onto the MP4 spec
+Software options for automated creation is woefully limited
+A maximum runtime of 9hrs 15 minutes, until you risk breaking the player.
+The 'bookmarks' are flat with no display options
+Only AAC encoded audio is supported - and must be created as a single file
+and many, many more reasons....
