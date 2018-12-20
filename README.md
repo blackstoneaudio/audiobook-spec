@@ -69,7 +69,7 @@ As for 'X':
 
 I beleive that a single file can describe where the assets are, and how to organize them. Think of it like a packing slip AND an assembly guide, in one.
 
-We could deliver *just* this file (for example to our App) and it would be able to assemble the pieces
+We could deliver *just* this file (for example to our App) and it would be able to assemble the pieces from cloud storage.
 We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it would equally describe the contents of that package.
 
 ### A note about M4Bs
