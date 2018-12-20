@@ -4,7 +4,7 @@ Data-oriented audiobook specification suitable for distribution and consumption.
 
 ## Background
 
-Blackstone Audio is the largest independent audiobook publisher in the United States, with over 30 years experience in Audiobook production.
+Blackstone Audio is the largest independent audiobook publisher in the United States, with 30+ years experience in Audiobook production.
 
 We produce and distribute original content through multiple digital and physical channels, and act as an aggregator for other publishers' content.
 
