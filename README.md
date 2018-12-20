@@ -8,15 +8,6 @@ We produce and distribute original content through multiple digital and physical
 
 To date, we have processed over 115,000 audiobook titles, converting them into several formats and packages for delivery to end-users, libraries and resellers.
 
-## Why a Spec?
-We have Apps, Web Players, and distribution agreements. All of these need to know what order play the audio, and how to display it. We need to know if we have all the resources for a book, and that those resources are in-tact.
-
-Our automated Ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
-
-Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages, for delivery to resellers and distribution partners.
-
-Through our Consumer website we sell content from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS) which play high quality M4As.
-
 ## Where does it start?
 
 It all starts with the publisher - and audio deliveries vary from publisher to publisher.
@@ -33,9 +24,18 @@ Sometimes (but not always) there is some form of 'manifest'. This manifest could
 
 When we redistribution content to other resellers, we adhere to the above agreement in addition to the custom specification laid out by our distribution partner.
 
+## Why a Spec?
 ONIX is a fantastic (if complex) standard for communicating Metadata. Supplemental material, samples, and cover image URLs can also be embedded.
 
 Unfortunately ONIX is not suitable for the Audio details, and no such standard exists.
+
+We have Apps, Web Players, and distribution agreements. All of these need to know what order play the audio, and how to display it. We need to know if we have all the resources for a book, and that those resources are in-tact.
+
+Our automated Ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
+
+Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages, for delivery to resellers and distribution partners.
+
+Through our Consumer website we sell content from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS) which play high quality M4As.
 
 ## Why try to solve distribution AND consumption?
 
