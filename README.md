@@ -14,7 +14,7 @@ To date, we have processed over 115,000 audiobook titles, converting them into s
 
 It all starts with the publisher - and audio deliveries vary from publisher to publisher.
 
-The only thing that is tentatively agreed on is:
+The only things generally agreed are:
 
 * Filesystem sort order should match the playback order
 *  File names should have a consistent structure for each book
