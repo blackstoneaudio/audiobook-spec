@@ -22,7 +22,7 @@ The only thing that is tentatively agreed on is:
 
 Sometimes (but not always) there is some form of 'manifest'. This manifest could be in any format (xml, xls, csv, etc) and there is no agreed standard. For us, this file is simply ignored.
 
-When we redistribution content to other resellers, we adhere to the above agreement in addition to the custom specification laid out by our distribution partner.
+When we redistribute content to other resellers, we adhere to the above agreement in addition to the custom specification laid out by our distribution partner.
 
 ## Why a Spec?
 ONIX is a fantastic (if complex) standard for communicating Metadata. Supplemental material, samples, and cover image URLs can also be embedded.
