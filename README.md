@@ -53,17 +53,17 @@ There are also several 'holes' in the delivery chain that break down with the fi
 
 ## Why YAML? Why not just use 'X'?
 
-YAML is easy to read
-YAML is a superset of JSON
-YAML supports comments
-YAML supports anchors/aliases
-YAML serializes to JSON
+* YAML is easy to read
+* YAML is a superset of JSON
+* YAML supports comments
+* YAML supports anchors/aliases
+* YAML serializes to JSON
 
 As for 'X':
 
-JSON is universally understood (did I mention YAML serializes to JSON?)
-XML hurts my brain
-CSV is not multi-dimensional
+* JSON is universally understood (did I mention YAML serializes to JSON?)
+* XML hurts my brain
+* CSV is not multi-dimensional
 
 ## But this "spec" is just a file? Where's the rest?
 
