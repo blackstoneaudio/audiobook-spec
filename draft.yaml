@@ -161,11 +161,11 @@ playlist:
 #playlist:
 #  - label:
 #    indent: 0
-#    stylesheet: "player.css"        # CSS stylesheet to use for this goup
-#    contents:                       # Audio Files to include in this group
-#      - label: "In the Beginning"   # Display Label
-#        audio: "/6729-001.m4a"      # audio resource key
-#        style: 'track'              # CSS style to use
+#    stylesheet: "player.css"
+#    contents:
+#      - label: "In the Beginning"
+#        audio: "/6729-001.m4a"
+#        style: 'track'
 #      - label: "War is coming"
 #        audio: "/6729-002.m4a"
 #        style: 'track'
