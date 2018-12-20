@@ -15,7 +15,7 @@ Our automated Ingestion platforms process ONIX to gather all the metadata for a 
 
 Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages, for delivery to resellers and distribution partners.
 
-Through our Consumer website we sell contents from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS)
+Through our Consumer website we sell content from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS) which play high quality M4As.
 
 ## Where does it start?
 
@@ -32,6 +32,10 @@ The only thing that is tentatively agreed on is:
 Sometimes (but not always) there is some form of 'manifest'. This manifest could be in any format (xml, xls, csv, etc) and there is no agreed standard. For us, this file is simply ignored.
 
 When we redistribution content to other resellers, we adhere to the above agreement in addition to the custom specification laid out by our distribution partner.
+
+ONIX is a fantastic (if complex) standard for communicating Metadata. Supplemental material, samples, and cover image URLs can also be embedded.
+
+Unfortunately ONIX is not suitable for the Audio details, and no such standard exists.
 
 ## Why try to solve distribution AND consumption?
 
