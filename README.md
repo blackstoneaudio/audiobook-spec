@@ -28,17 +28,17 @@ When we redistribute content to other resellers, we adhere to the above agreemen
 
 ## Why a Spec?
 
-ONIX is a fantastic (if complex) standard for communicating Metadata. Supplemental material, samples, and cover image URLs can also be embedded.
+ONIX is a fantastic (if complex) standard for communicating metadata. Supplemental material, samples, and cover image URLs can also be embedded.
 
-Unfortunately ONIX is not suitable for the Audio details, and no such standard exists.
+Unfortunately ONIX is not suitable for the audio details, and no such standard exists.
 
-We have Apps, Web Players, and distribution agreements. All of these need to know what order play the audio, and how to display it. We need to know if we have all the resources for a book, and that those resources are in-tact.
+We have apps, web players, and distribution agreements. All of these need to know the display and playback order, if we have all the resources for a book, and that those resources are in-tact.
 
-Our automated Ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
+Our automated ingestion platforms process ONIX to gather all the metadata for a product. Then we receive Audio deliveries through alternative channels.
 
-Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages, for delivery to resellers and distribution partners.
+Our automated delivery platform aggregates the audio (and associated resources) into appropriate packages for delivery to resellers and distribution partners.
 
-Through our Consumer website we sell content from every major publisher. We offer M4B and Zipped-MP3s for our customers to download, in addition to our own apps (Web, Android, iOS) which play high quality M4As.
+Through our consumer website we sell content from every major publisher. We offer M4B and zipped MP3s for our customers to download. In addition our apps (web, Android, iOS) play high quality M4As.
 
 ## Why try to solve distribution AND consumption?
 
@@ -46,9 +46,9 @@ Distribution and consumption by users share common data points beyond "here's a 
 
 There are also several 'holes' in the delivery chain that break down with the first delivery.
 
-* There is no way for a publisher to communicate any form of playback order, beyond the filesystem sorting.
-* If they have taken the extra time to label the tracks (Chapter 1, Part 3, etc) there is no standard way of ingesting that in order to preserve that work.
-* They cannot indicate any contractual obligations regarding the labelling of the audio
+* There is no way for a publisher to communicate any form of playback order (beyond filesystem sorting).
+* If a publisher has taken the extra time to label the tracks (Chapter 1, Part 3, etc) there is no standard way of ingesting that in order to preserve that work.
+* Publishers cannot indicate any contractual obligations regarding the labelling of the audio
 * There is no standard way of exchanging additional data about the files (md5, runtime, count) to ensure they are complete
 
 ## Why YAML? Why not just use 'X'?
@@ -67,9 +67,9 @@ As for 'X':
 
 ## But this "spec" is just a file? Where's the rest?
 
-I believe that a single file can describe where the assets are, and how to organize them. Think of it like a packing slip AND an assembly guide, in one.
+I believe a single file can describe where the assets are, and how to organize them. Think of it like a packing slip and assembly guide in one.
 
-We could deliver *just* this file (for example to our App) and it would be able to assemble the pieces from cloud storage.
+We could deliver *just* this file (for example to our app) and it would be able to assemble the pieces from cloud storage.
 We could include this file in a packaged bundle (ISO, Zip, gZip, Tar etc) and it would equally describe the contents of that package.
 
 ### A note about M4Bs
@@ -77,7 +77,7 @@ If you are wondering why I would completely ignore M4Bs, it's because they are c
 
 * It's an Apple spec tacked onto the MP4 spec
 * Software options for automated creation is woefully limited
-* A maximum runtime of 9hrs 15 minutes, until you risk breaking the player.
+* A maximum runtime of 9hrs 15 minutes
 * The 'bookmarks' are flat with no display options
 * Only AAC encoded audio is supported - and must be created as a single file
 * and many, many more reasons....
