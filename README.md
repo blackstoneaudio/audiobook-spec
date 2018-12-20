@@ -28,7 +28,7 @@ When we redistribute content to other resellers, we adhere to the above agreemen
 
 ## Why a Spec?
 
-ONIX is a fantastic (if complex) standard for communicating metadata. Supplemental material, samples, and cover image URLs can also be embedded.
+ONIX is a fantastic (if complex) standard for communicating metadata. Supplemental material, samples, and cover image URLs can also be included.
 
 Unfortunately ONIX is not suitable for the audio details, and no such standard exists.
 
