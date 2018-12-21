@@ -247,12 +247,13 @@ properties:
       "$id": "#/properties/playlist/items"
       type: object
       title: The Items Schema
+      required:
+        - contents
       optional:
-      - label
-      - style
-      - indent
-      - stylesheet
-      - contents
+        - label
+        - style
+        - indent
+        - stylesheet
       properties:
         label:
           "$id": "#/properties/playlist/items/properties/label"

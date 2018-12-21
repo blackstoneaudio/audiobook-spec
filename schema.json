@@ -312,12 +312,14 @@
         "$id": "#/properties/playlist/items",
         "type": "object",
         "title": "The Items Schema",
+        "required": [
+          "contents"
+        ],
         "optional": [
           "label",
           "style",
           "indent",
-          "stylesheet",
-          "contents"
+          "stylesheet"
         ],
         "properties": {
           "label": {

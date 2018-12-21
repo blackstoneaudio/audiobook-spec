@@ -19,10 +19,10 @@ It all starts with the publisher - and audio deliveries vary from publisher to p
 The only things generally agreed are:
 
 * Filesystem sort order should match the playback order
-*  File names should have a consistent structure for each book
-*  All numbers should be equally padded
-*  All audio will be of the same format
-*  The product identifier must be locatable
+* File names should have a consistent structure for each book
+* All numbers should be equally padded
+* All audio will be of the same format
+* The product identifier must be locatable
 
 Sometimes (but not always) there is some form of 'manifest'. This manifest could be in any format (xml, xls, csv, etc) and there is no agreed standard. For us, this file is simply ignored.
 
