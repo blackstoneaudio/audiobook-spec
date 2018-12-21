@@ -1,7 +1,331 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "http://example.com/product.schema.json",
-  "title": "Product",
-  "description": "A product in the catalog",
-  "type": "object"
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "Audiobook Packaging Specification",
+  "required": [
+    "book",
+    "resources",
+    "audio",
+    "playlist"
+  ],
+  "properties": {
+    "book": {
+      "$id": "#/properties/book",
+      "type": "object",
+      "title": "The Book Schema",
+      "required": [
+        "title",
+        "abridgement",
+        "author",
+        "narrator",
+        "copyright",
+        "isbn13",
+        "cover",
+        "credits",
+        "audio"
+      ],
+      "optional": [
+        "subtitle",
+        "version",
+        "modified",
+        "license",
+        "resources"
+      ],
+      "properties": {
+        "title": {
+          "$id": "#/properties/book/properties/title",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "String to display as the book title",
+          "examples": [
+            "The Story of a Specification"
+          ]
+        },
+        "subtitle": {
+          "$id": "#/properties/book/properties/subtitle",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "Optional subtitle for the book",
+          "examples": [
+            "From nothing, to something"
+          ]
+        },
+        "abridgement": {
+          "$id": "#/properties/book/properties/abridgement",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "Book Abridgement",
+          "examples": [
+            "Unabridged",
+            "Abridged",
+            "Other"
+          ]
+        },
+        "author": {
+          "$id": "#/properties/book/properties/author",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "String to display as the \"Author\"",
+          "examples": [
+            "Geoff Jukes and Others"
+          ]
+        },
+        "narrator": {
+          "$id": "#/properties/book/properties/narrator",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "String to display as the \"Narrator\"",
+          "examples": [
+            "Geoff Jukes"
+          ]
+        },
+        "copyright": {
+          "$id": "#/properties/book/properties/copyright",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "Copyright Statement",
+          "examples": [
+            "Blackstone Publishing, Inc."
+          ]
+        },
+        "isbn13": {
+          "$id": "#/properties/book/properties/isbn13",
+          "type": "string",
+          "pattern": "^([0-9]){13}$",
+          "title": "The Book ISBN-13",
+          "examples": [
+            "9781234567890"
+          ]
+        },
+        "cover": {
+          "$id": "#/properties/book/properties/cover",
+          "type": "string",
+          "pattern": "^/(.*)$",
+          "title": "Reference Key for Resource File to use as the cover",
+          "examples": [
+            "/cover.jpg"
+          ]
+        },
+        "version": {
+          "$id": "#/properties/book/properties/version",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "Product Version Reference",
+          "examples": [
+            "a02291caf068b252c6ba899cf6f13cf3"
+          ]
+        },
+        "modified": {
+          "$id": "#/properties/book/properties/modified",
+          "type": "string",
+          "pattern": "date-time",
+          "title": "Product Modified Timestamp",
+          "examples": [
+            "2012-08-14T16:49:59+00:00"
+          ]
+        },
+        "license": {
+          "$id": "#/properties/book/properties/license",
+          "type": "string",
+          "pattern": "^(.*)$",
+          "title": "Decryption Key"
+        },
+        "credits": {
+          "$id": "#/properties/book/properties/credits",
+          "type": "object",
+          "title": "Book Credits",
+          "patternProperties": {
+            "^(.*)$": {
+              "$id": "#/properties/book/properties/credits/patternProperties",
+              "type": "array",
+              "title": "Name of Credit to diaply (Author/Narrator/etc )",
+              "items": {
+                "$id": "#/properties/book/properties/credits/patternProperties/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                  "Geoff Jukes"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          }
+        }
+      }
+    },
+    "resources": {
+      "$id": "#/properties/resources",
+      "type": "object",
+      "title": "Resources Collection",
+      "patternProperties": {
+        "^/(.*)$": {
+          "$id": "#/properties/resources/patternProperties",
+          "type": "object",
+          "title": "Resource File",
+          "required": [
+            "source",
+            "label",
+            "mimetype"
+          ],
+          "optional": [
+            "md5",
+            "modified",
+            "size"
+          ],
+          "properties": {
+            "source": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/source",
+              "type": "string",
+              "pattern": "uri-reference",
+              "title": "Where to fetch the file from",
+              "examples": [
+                "http://example.org/cover.jpg"
+              ]
+            },
+            "label": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/label",
+              "type": "string",
+              "pattern": "^(.*)$",
+              "title": "Freindly Label for the file",
+              "default": "",
+              "examples": [
+                "The Story of a Specification (Unabridged)"
+              ]
+            },
+            "md5": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/md5",
+              "type": "string",
+              "passern": "^(\\w){32}$",
+              "title": "File MD5",
+              "examples": [
+                "06f33a03629a38129cfdfc46be2256c5"
+              ]
+            },
+            "mimetype": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/mimetype",
+              "type": "string",
+              "pattern": "^[\\w]+/[\\w]+$",
+              "title": "File Mimetype",
+              "default": "",
+              "examples": [
+                "image/jpeg"
+              ]
+            },
+            "modified": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/modified",
+              "type": "string",
+              "pattern": "date-time",
+              "title": "File Modified ISO Timestamp",
+              "examples": [
+                "2012-08-10T15:39:57+00:00"
+              ]
+            },
+            "size": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/size",
+              "type": "integer",
+              "title": "File Size in Bytes",
+              "examples": [
+                123456789
+              ]
+            }
+          }
+        }
+      }
+    },
+    "audio": {
+      "$id": "#/properties/audio",
+      "type": "object",
+      "title": "Audio Collection",
+      "patternProperties": {
+        "^/(.*)$": {
+          "$id": "#/properties/resources/patternProperties",
+          "type": "object",
+          "title": "Resource File",
+          "required": [
+            "source",
+            "label",
+            "mimetype"
+          ],
+          "optional": [
+            "md5",
+            "modified",
+            "size"
+          ],
+          "properties": {
+            "source": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/source",
+              "type": "string",
+              "pattern": "uri-reference",
+              "title": "Where to fetch the file from",
+              "examples": [
+                "http://example.org/cover.jpg"
+              ]
+            },
+            "label": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/label",
+              "type": "string",
+              "pattern": "^(.*)$",
+              "title": "Freindly Label for the file",
+              "default": "",
+              "examples": [
+                "The Story of a Specification (Unabridged)"
+              ]
+            },
+            "md5": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/md5",
+              "type": "string",
+              "passern": "^(\\w){32}$",
+              "title": "File MD5",
+              "examples": [
+                "06f33a03629a38129cfdfc46be2256c5"
+              ]
+            },
+            "mimetype": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/mimetype",
+              "type": "string",
+              "pattern": "^[\\w]+/[\\w]+$",
+              "title": "File Mimetype",
+              "default": "",
+              "examples": [
+                "image/jpeg"
+              ]
+            },
+            "modified": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/modified",
+              "type": "string",
+              "pattern": "date-time",
+              "title": "File Modified ISO Timestamp",
+              "examples": [
+                "2012-08-10T15:39:57+00:00"
+              ]
+            },
+            "size": {
+              "$id": "#/properties/resources/properties//cover.jpg/properties/size",
+              "type": "integer",
+              "title": "File Size in Bytes",
+              "examples": [
+                123456789
+              ]
+            },
+            "length": {
+              "$id": "#/properties/audio/properties//6729-001.m4a/properties/length",
+              "type": "number",
+              "title": "Track length in seconds",
+              "examples": [
+                3336.3330416666668
+              ]
+            },
+            "license": {
+              "$id": "#/properties/audio/properties//6729-001.m4a/properties/license",
+              "type": "string",
+              "pattern": "^(.*)$",
+              "title": "Decryption Key"
+            }
+          }
+        }
+      }
+    }
+  }
 }
