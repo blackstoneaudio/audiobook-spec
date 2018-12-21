@@ -99,13 +99,15 @@ properties:
       modified:
         "$id": "#/properties/book/properties/modified"
         type: string
-        pattern: "date-time"
+        pattern: date-time
         title: Product Modified Timestamp
         examples:
           - '2012-08-14T16:49:59+00:00'
       license:
         "$id": "#/properties/book/properties/license"
-        type: string
+        type:
+          - string
+          - 'null'
         pattern: "^(.*)$"
         title: Decryption Key
       credits:
@@ -144,14 +146,14 @@ properties:
           - size
         properties:
           source:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/source"
+            "$id": "#/properties/resources/properties/source"
             type: string
-            pattern: "uri-reference"
+            pattern: uri-reference
             title: Where to fetch the file from
             examples:
               - http://example.org/cover.jpg
           label:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/label"
+            "$id": "#/properties/resources/properties/label"
             type: string
             pattern: "^(.*)$"
             title: Freindly Label for the file
@@ -159,14 +161,14 @@ properties:
             examples:
               - The Story of a Specification (Unabridged)
           md5:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/md5"
+            "$id": "#/properties/resources/properties/md5"
             type: string
             passern: "^(\\w){32}$"
             title: File MD5
             examples:
               - 06f33a03629a38129cfdfc46be2256c5
           mimetype:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/mimetype"
+            "$id": "#/properties/resources/properties/mimetype"
             type: string
             pattern: "^[\\w]+/[\\w]+$"
             title: File Mimetype
@@ -174,14 +176,14 @@ properties:
             examples:
               - image/jpeg
           modified:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/modified"
+            "$id": "#/properties/resources/properties/modified"
             type: string
-            pattern: "date-time"
+            pattern: date-time
             title: File Modified ISO Timestamp
             examples:
               - '2012-08-10T15:39:57+00:00'
           size:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/size"
+            "$id": "#/properties/resources/properties/size"
             type: integer
             title: File Size in Bytes
             examples:
@@ -206,7 +208,7 @@ properties:
           - license
         properties:
       "^/(.*)$":
-        "$id": "#/properties/resources/patternProperties"
+        "$id": "#/properties/audio/patternProperties"
         type: object
         title: Resource File
         required:
@@ -219,14 +221,14 @@ properties:
           - size
         properties:
           source:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/source"
+            "$id": "#/properties/audio/properties/source"
             type: string
-            pattern: "uri-reference"
+            pattern: uri-reference
             title: Where to fetch the file from
             examples:
               - http://example.org/cover.jpg
           label:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/label"
+            "$id": "#/properties/audio/properties/label"
             type: string
             pattern: "^(.*)$"
             title: Freindly Label for the file
@@ -234,14 +236,14 @@ properties:
             examples:
               - The Story of a Specification (Unabridged)
           md5:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/md5"
+            "$id": "#/properties/audio/properties/md5"
             type: string
             passern: "^(\\w){32}$"
             title: File MD5
             examples:
               - 06f33a03629a38129cfdfc46be2256c5
           mimetype:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/mimetype"
+            "$id": "#/properties/audio/properties/mimetype"
             type: string
             pattern: "^[\\w]+/[\\w]+$"
             title: File Mimetype
@@ -249,26 +251,28 @@ properties:
             examples:
               - image/jpeg
           modified:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/modified"
+            "$id": "#/properties/audio/properties/modified"
             type: string
-            pattern: "date-time"
+            pattern: date-time
             title: File Modified ISO Timestamp
             examples:
               - '2012-08-10T15:39:57+00:00'
           size:
-            "$id": "#/properties/resources/properties//cover.jpg/properties/size"
+            "$id": "#/properties/audio/properties/size"
             type: integer
             title: File Size in Bytes
             examples:
               - 123456789
           length:
-            "$id": "#/properties/audio/properties//6729-001.m4a/properties/length"
+            "$id": "#/properties/audio/properties/length"
             type: number
             title: Track length in seconds
             examples:
               - 3336.3330416666668
           license:
-            "$id": "#/properties/audio/properties//6729-001.m4a/properties/license"
-            type: string
+            "$id": "#/properties/audio/properties/license"
+            type:
+              - string
+              - 'null'
             pattern: "^(.*)$"
             title: Decryption Key
