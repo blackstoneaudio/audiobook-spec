@@ -86,11 +86,10 @@ resources:
 # it can be 'fetched' from the `source`
 # Basically an extension of the `resources` hashes, adding length and license values.
 audio:
-  /6729-001.m4a:
-    source: "http://example.org/audio/6729-001.m4a"             # Source of audio file resource
-    length: 3336.3330416666668                                  # Track runtime in seconds
-    md5: "c45c8f927f93f474074c5641f205349c"                     # Track data hash
-    mimetype: "audio/mpeg"                                      # Audio MimeType
+  /6729-001.m4a:                                                # Key is a relative filepath
+    source: "http://example.org/audio/6729-001.m4a"             # Optional: source of audio file resource
+    length: 3336.3330416666668                                  # Required: Track runtime in seconds
+    md5: "c45c8f927f93f474074c5641f205349c"                     # Optional: Track data hash
     modified: "2012-08-14T16:49:50+00:00"                       # Modified Timestamp of file in  ISO format
     size: 80072018                                              # Size in bytes
     license:                                                    # If you use file-level encryption
@@ -98,7 +97,6 @@ audio:
     source: "http://example.org/audio/6729-002.m4a"
     length: 2446.1845
     md5: "857ce612dc13b3446a8b728286843274"
-    mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:52+00:00"
     size: 58708453
     license:
@@ -106,7 +104,6 @@ audio:
     source: "http://example.org/audio/6729-003.m4a"
     length: 2543.1249166666666
     md5: "00408f65e855ccfced068fe7a3a201f5"
-    mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:55+00:00"
     size: 61035023
     license:
@@ -114,7 +111,6 @@ audio:
     source: "http://example.org/audio/6729-004.m4a"
     length: 3364.022875
     md5: "15e9654a94eaa16484d8d94a3f4356f8"
-    mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:59+00:00"
     size: 80736574
     license:
@@ -122,7 +118,6 @@ audio:
     source: "http://example.org/audio/6729-005.m4a"
     length: 3364.022875
     md5: "1425374a94eaa16484d8783950-34g93"
-    mimetype: "audio/mpeg"
     modified: "2012-08-14T16:49:59+00:00"
     size: 80736574
     license:

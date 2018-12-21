@@ -199,7 +199,7 @@
             "md5": {
               "$id": "#/properties/resources/properties/md5",
               "type": "string",
-              "passern": "^(\\w){32}$",
+              "pattern": "^[a-zA-Z0-9]{32}$",
               "title": "File MD5",
               "examples": [
                 "06f33a03629a38129cfdfc46be2256c5"
@@ -246,10 +246,10 @@
           "type": "object",
           "title": "Audio File",
           "required": [
-            "source"
+            "length"
           ],
           "optional": [
-            "length",
+            "source",
             "md5",
             "modified",
             "size",
@@ -298,6 +298,124 @@
               ],
               "pattern": "^(.*)$",
               "title": "Decryption Key"
+            }
+          }
+        }
+      }
+    },
+    "playlist": {
+      "$id": "#/properties/playlist",
+      "type": "array",
+      "minItems": 1,
+      "title": "The Playlist",
+      "items": {
+        "$id": "#/properties/playlist/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "optional": [
+          "label",
+          "style",
+          "indent",
+          "stylesheet",
+          "contents"
+        ],
+        "properties": {
+          "label": {
+            "$id": "#/properties/playlist/items/properties/label",
+            "type": "string",
+            "pattern": "^(.*)$",
+            "title": "Optional label for this playlist",
+            "examples": [
+              "Part One",
+              "Chapter 1",
+              "Preface"
+            ]
+          },
+          "stylesheet": {
+            "$id": "#/properties/playlist/items/properties/stylesheet",
+            "type": "string",
+            "pattern": "^(\\w+)(.css)$",
+            "title": "Stylesheet to use for this playlist",
+            "examples": [
+              "playlist.css"
+            ]
+          },
+          "style": {
+            "$id": "#/properties/playlist/items/properties/style",
+            "type": "string",
+            "pattern": "^(.*)$",
+            "title": "Default Style for labels in this list",
+            "examples": [
+              "book-section"
+            ]
+          },
+          "indent": {
+            "$id": "#/properties/playlist/items/properties/indent",
+            "type": "integer",
+            "title": "Display Indent for the label, and base-indent for all contents",
+            "default": 0
+          },
+          "contents": {
+            "$id": "#/properties/playlist/items/properties/contents",
+            "type": "array",
+            "minItems": 1,
+            "title": "Playlist items",
+            "items": {
+              "$id": "#/properties/playlist/items/properties/contents/items",
+              "type": "object",
+              "title": "Playlist Item",
+              "required": [
+                "label"
+              ],
+              "optional": [
+                "audio",
+                "label",
+                "audio",
+                "indent",
+                "style"
+              ],
+              "properties": {
+                "label": {
+                  "$id": "#/properties/playlist/items/properties/contents/items/properties/label",
+                  "type": "string",
+                  "pattern": "^(.*)$",
+                  "title": "Label to display for this item",
+                  "examples": [
+                    "In the Beginning"
+                  ]
+                },
+                "audio": {
+                  "$id": "#/properties/playlist/items/properties/contents/items/properties/audio",
+                  "type": "string",
+                  "pattern": "^(.*)$",
+                  "title": "Audio to use for this item",
+                  "examples": [
+                    "/6729-001.m4a"
+                  ]
+                },
+                "indent": {
+                  "$id": "#/properties/playlist/items/properties/contents/items/properties/indent",
+                  "type": "integer",
+                  "title": "Display Indent for this label, offset from Playlist indent",
+                  "default": 0
+                },
+                "style": {
+                  "$id": "#/properties/playlist/items/properties/contents/items/properties/style",
+                  "type": "string",
+                  "pattern": "^(.*)$",
+                  "title": "Playlist CSS style reference"
+                },
+                "resources": {
+                  "$id": "#/properties/playlist/items/properties/contents/items/properties/resources",
+                  "type": "array",
+                  "title": "Resource files associated with this playlist item",
+                  "items": {
+                    "$id": "#/properties/playlist/items/properties/contents/items/properties/resources/item",
+                    "type": "string",
+                    "pattern": "^(.*)$"
+                  }
+                }
+              }
             }
           }
         }
