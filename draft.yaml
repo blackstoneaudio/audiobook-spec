@@ -53,13 +53,6 @@ book:
       - "Blackstone Publishing, Inc."
     contributors:
       - "The World"
-  audio:
-    files: 4                                                          # Total number of audio files
-    size: 280552068                                                   # Total size of the audio in bytes
-    runtime: 11689.665333333332                                       # Total runtime of all the audio, in seconds
-  resources:
-    files: 3                                                          # Number of resources files
-    size: 2215844                                                     # Total size of all resources files
 
 # `resources` covers the non-audio assets that are available.
 # The key is the relative path, which the App will deal with as appropriate
