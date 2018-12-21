@@ -24,22 +24,13 @@
       "contributors": [
         "The World"
       ]
-    },
-    "audio": {
-      "files": 4,
-      "size": 280552068,
-      "runtime": 11689.665333333332
-    },
-    "resources": {
-      "files": 3,
-      "size": 2215844
     }
   },
   "resources": {
     "/cover.jpg": {
       "source": "http://example.org/cover.jpg",
       "label": "The Story of a Specification (Unabridged)",
-      "md5s": "06f33a03629a38129cfdfc46be2256c5",
+      "md5": "06f33a03629a38129cfdfc46be2256c5",
       "mimetype": "image/jpeg",
       "modified": "2012-08-10T15:39:57+00:00",
       "size": 345645
