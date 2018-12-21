@@ -22,7 +22,6 @@ properties:
       - isbn13
       - cover
       - credits
-      - audio
     optional:
       - subtitle
       - version
@@ -99,7 +98,7 @@ properties:
       modified:
         "$id": "#/properties/book/properties/modified"
         type: string
-        pattern: date-time
+        format: date-time
         title: Product Modified Timestamp
         examples:
           - '2012-08-14T16:49:59+00:00'
@@ -148,7 +147,7 @@ properties:
           source:
             "$id": "#/properties/resources/properties/source"
             type: string
-            pattern: uri-reference
+            format: uri-reference
             title: Where to fetch the file from
             examples:
               - http://example.org/cover.jpg
@@ -170,7 +169,7 @@ properties:
           mimetype:
             "$id": "#/properties/resources/properties/mimetype"
             type: string
-            pattern: "^[\\w]+/[\\w]+$"
+            pattern: "^[a-z]+/[a-z]+$"
             title: File Mimetype
             default: ''
             examples:
@@ -178,7 +177,7 @@ properties:
           modified:
             "$id": "#/properties/resources/properties/modified"
             type: string
-            pattern: date-time
+            format: date-time
             title: File Modified ISO Timestamp
             examples:
               - '2012-08-10T15:39:57+00:00'
@@ -194,7 +193,7 @@ properties:
     title: Audio Collection
     patternProperties:
       "^/(.*)$":
-        "$id": "#/properties/audio/properties//6729-001.m4a"
+        "$id": "#/properties/audio/patternProperties"
         type: object
         title: Audio File
         required:
@@ -202,58 +201,21 @@ properties:
         optional:
           - length
           - md5
-          - mimetype
           - modified
           - size
           - license
         properties:
-      "^/(.*)$":
-        "$id": "#/properties/audio/patternProperties"
-        type: object
-        title: Resource File
-        required:
-          - source
-          - label
-          - mimetype
-        optional:
-          - md5
-          - modified
-          - size
-        properties:
           source:
             "$id": "#/properties/audio/properties/source"
             type: string
-            pattern: uri-reference
+            format: uri-reference
             title: Where to fetch the file from
             examples:
               - http://example.org/cover.jpg
-          label:
-            "$id": "#/properties/audio/properties/label"
-            type: string
-            pattern: "^(.*)$"
-            title: Freindly Label for the file
-            default: ''
-            examples:
-              - The Story of a Specification (Unabridged)
-          md5:
-            "$id": "#/properties/audio/properties/md5"
-            type: string
-            passern: "^(\\w){32}$"
-            title: File MD5
-            examples:
-              - 06f33a03629a38129cfdfc46be2256c5
-          mimetype:
-            "$id": "#/properties/audio/properties/mimetype"
-            type: string
-            pattern: "^[\\w]+/[\\w]+$"
-            title: File Mimetype
-            default: ''
-            examples:
-              - image/jpeg
           modified:
             "$id": "#/properties/audio/properties/modified"
             type: string
-            pattern: date-time
+            format: date-time
             title: File Modified ISO Timestamp
             examples:
               - '2012-08-10T15:39:57+00:00'
